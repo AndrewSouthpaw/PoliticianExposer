@@ -5,11 +5,12 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "postinstall": "gulp deploy",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "connect-livereload": "^0.5.0",
     "express": "^4.9.7",
     "gulp": "^3.8.8",
