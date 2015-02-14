@@ -17,47 +17,6 @@
 </head>
 <body>
 <h1 id="title">25 Years of political money.</h1>
-  <script type="text/javascript">
-
-    var w = 960,
-    h = 500,
-    nodes = [];
-
-    var svg = d3.select("body").append("svg:svg")
-    .attr("width", w)
-    .attr("height", h);
-
-    var force = d3.layout.force()
-    .charge(-20)
-    .size([w, h])
-    .nodes(nodes)
-    .on("tick", tick)
-    .start();
-
-  function tick() {
-    svg.selectAll("circle")
-      .attr("cx", function(d) { return d.x; })
-      .attr("cy", function(d) { return d.y; });
-    }
-
-  var interval = setInterval(function() {
-    var d = {
-    x: w / 2 + 2 * Math.random() - 1,
-    y: h / 2 + 2 * Math.random() - 1
-    };
-
-    svg.append("svg:circle")
-      .data([d])
-      .attr("r", 1e-6)
-    .transition()
-      .ease(Math.sqrt)
-      .attr("r", 4.5);
-
-    if (nodes.push(d) > 300) clearInterval(interval);
-    force.start();
-  }, 30);
-
-  </script>
   <!-- inject:js -->
   <script src="app/app.js"></script>
   <!-- endinject -->
