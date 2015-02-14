@@ -6,7 +6,7 @@ for(var i = 1990; i<2015; i++){
 
 
 for(var j = 0; j<years.length; j++){
-	var url = 'http://transparencydata.com/api/1.0/aggregates/pols/top_100.json?cycle='+years[j]+'&apikey=5120da11e9e24de3a4087a8a4f34fcd8';
+	var url = 'http://transparencydata.com/api/1.0/aggregates/pols/top_100.json?cycle='+years[j]+'&apikey=2de79c8522f94e33b12d0f1ff179ece0';
 	$.ajax({
 		crossDomain: true,
 		url:url,
