@@ -10,8 +10,8 @@
   app.use(reloader());
   app.use(express.static('./client'));
 
-
-  app.listen(9000, function(){
+  var port = process.env.PORT || 9000;
+  app.listen(port, function(){
     console.log('App Listening on localhost:9000');
   });
 
