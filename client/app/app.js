@@ -6,8 +6,8 @@
   function initialize(elementId){
 
     var runner = Runner(elementId);
-    console.log(runner)
-    runner.update('Check out HackReactor');
+    console.log(runner);
+    runner.update('25 years of political money');
 
     ///////////////////////
 
