@@ -18,6 +18,7 @@ gulp.task('watch', startWatch);
 gulp.task('inject', startInject);
 gulp.task('deploy', deploy);
 gulp.task('heroku', $.sequence('inject'));
+gulp.task('deployHeroku', deployHeroku);
 
 function startServer(){
   require('./server');
@@ -48,6 +49,11 @@ function deploy() {
   }
 }
 
-
+function deployHeroku() {
+  gulp.src('')
+    .pipe($.shell([
+      'git push heroku master'
+    ]))
+}
 
 })();
