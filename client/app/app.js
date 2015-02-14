@@ -1,5 +1,14 @@
 (function(){
   'use strict';
+  
+  
+$.ajax({
+crossDomain: true,
+url:'http://transparencydata.com/api/1.0/aggregates/pols/top_100.json?cycle=1990&apikey=5120da11e9e24de3a4087a8a4f34fcd8',
+type:'GET',
+success:function(d){console.log(d.length)},
+dataType: "jsonp"
+})
 
   initialize('title');
 
