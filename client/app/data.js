@@ -1,5 +1,5 @@
 var years = [];
-var data  = {};
+var data  = [];
 for(var i = 1990; i<2015; i++){
 	years.push(i);
 }
@@ -12,7 +12,7 @@ for(var j = 0; j<years.length; j++){
 		url:url,
 		type:'GET',
 		success:function(d){
-			data[years[j]] = d;
+			data.push(d);
 		},
 		dataType: "jsonp"
 	})
